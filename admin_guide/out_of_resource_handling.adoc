@@ -188,6 +188,10 @@ period specified.
 The node evaluates and monitors eviction thresholds every 10 seconds and the
 value can not be modified. This is the housekeeping interval.
 
+For memory thresholds, the `--experimental-kernel-memcg-notification` will enable
+immediate notification when a threshold is met using `event_control` in the memory
+cgroup.  This allows the eviction manager to react immediately in response to a
+memory threshold being met rather than waiting for the next monitoring interval.
 
 [[out-of-resource-mapping-eviction-signals-to-node-conditions]]
 === Mapping Eviction Signals to Node Conditions
